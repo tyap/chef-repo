@@ -11,5 +11,5 @@ include_recipe "apt"
 include_recipe "ntp"
 
 template '/tmp/greeting.txt' do
-  variables greeting: 'Hello!'
+   content node['my_cookbook']['greeting']
 end
